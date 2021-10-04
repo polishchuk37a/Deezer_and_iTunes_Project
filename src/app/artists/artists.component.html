@@ -1,0 +1,64 @@
+<div class="container">
+  <form class="form" [formGroup]="form">
+    <input class="artist_name_input" type="text" placeholder="Write the artist's name" formControlName="artistName" #name
+           (keyup.enter)="getArtistAlbumFromDeezer(name.value)">
+  </form>
+
+  <div class="cards_container">
+
+    <div class="card" *ngFor="let i of artistDeezer">
+      <div class="title_service-block">
+        <h1 class="title_service">Deezer</h1>
+        <hr>
+      </div>
+
+      <div class="album_title-block">
+        <h1 class="album_title">Album</h1>
+      </div>
+
+      <div class="artist_info-block">
+        <div class="artist_picture-block">
+          <img class="artist_picture" src="{{i.album.cover}}" alt="">
+        </div>
+
+        <div class="album_info-block">
+          <h1 class="artist_title">{{i.album.title}}</h1>
+          <h1 class="artist_name">Artist name: {{i.artist.name}}</h1>
+          <div class="link-block">
+            <h1 class="title_link">Click here to watch:</h1>
+            <a class="artist_link" target="_blank" href="{{i.link}}">See</a>
+          </div>
+          <button class="more_details-btn" routerLink="/album/{{i.album.id}}">More details</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" *ngFor="let i of artistITunes">
+      <div class="title_service-block">
+        <h1 class="title_service">iTunes</h1>
+        <hr>
+      </div>
+
+      <div class="album_title-block">
+        <h1 class="album_title">Album</h1>
+      </div>
+
+      <div class="artist_info-block">
+        <div class="artist_picture-block">
+          <img class="artist_picture" src="{{i.artworkUrl100}}" alt="">
+        </div>
+
+        <div class="album_info-block">
+          <h1 class="artist_title">{{i.trackName}}</h1>
+          <h1 class="artist_name">Artist name: {{i.artistName}}</h1>
+          <div class="link-block">
+            <h1 class="title_link">Click here to watch:</h1>
+            <a class="artist_link" target="_blank" href="{{i.trackViewUrl}}">See</a>
+          </div>
+          <button class="more_details-btn" routerLink="/album/{{i.collectionId}}">More details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

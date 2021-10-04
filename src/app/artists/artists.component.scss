@@ -1,0 +1,131 @@
+.container{
+  width: 1800px;
+  margin: 0 auto;
+
+  .form{
+    justify-content: center;
+    display: flex;
+
+    .artist_name_input{
+      width: 400px;
+      height: 50px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      background: #222124;
+      padding-left: 15px;
+      color: white;
+    }
+  }
+
+  ::placeholder{
+    color: #858487;
+  }
+
+  .cards_container{
+    width: 1630px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .card{
+      width: 800px;
+      height: 500px;
+      background: #262129;
+      border-radius: 10px;
+      margin-top: 20px;
+      font-family: Urbanist, sans-serif;
+      box-shadow: 0 0 30px rgba(9, 9, 14, 0.5);
+
+      .title_service-block{
+        text-align: center;
+
+        .title_service{
+          color: #86b9e3;
+        }
+      }
+
+      .album_title-block{
+        text-align: center;
+        .album_title{
+          margin-top: 20px;
+          color: #889991;
+        }
+      }
+
+      .artist_info-block{
+        height: 300px;
+        display: flex;
+        background: #1e1b21;
+
+        .artist_picture-block{
+          margin-top: 25px;
+          margin-left: 30px;
+
+          .artist_picture{
+            width: 250px;
+            height: 250px;
+            transition: 1s;
+            margin: 0 auto;
+
+            .artist_picture:hover{
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+
+      .album_info-block{
+        margin-top: 25px;
+        margin-left: 30px;
+
+        .artist_title{
+          margin-top: 0;
+          color: white;
+          font-size: 35px;
+        }
+
+        .artist_name{
+          margin-top: 10px;
+          font-size: 20px;
+          color: white;
+        }
+
+        .link-block{
+          margin: 0 auto;
+          display: flex;
+
+          .title_link{
+            font-size: 20px;
+            color: white;
+          }
+
+          .artist_link{
+            margin-top: 11px;
+            margin-left: 5px;
+            font-size: 20px;
+            color: orange;
+          }
+        }
+      }
+
+      .more_details-btn{
+        margin-top: 45px;
+        width: 200px;
+        height: 50px;
+        font-size: 25px;
+        border: none;
+        border-radius: 8px;
+        outline: none;
+        background: #2c294a;
+        color: white;
+        margin-right: 0;
+      }
+      .more_details-btn:hover{
+        cursor: pointer;
+        background: #423f61;
+      }
+    }
+  }
+}
